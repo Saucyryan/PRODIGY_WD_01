@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ff6f61; /* Vibrant coral color */
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative; /* Position for dropdown */
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ff9f00; /* Bright orange for dropdown */
+    padding: 10px;
+    border-radius: 5px;
+    animation: fadeIn 0.3s ease; /* Animation for dropdown */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.dropdown li {
+    margin: 0;
+}
+
+.dropdown li a {
+    padding: 10px 15px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.dropdown li a:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+.scrolled {
+    background-color: #c0392b; /* Darker red when scrolled */
+}
+
+.content {
+    margin-top: 60px; /* Space for fixed navbar */
+    padding: 20px;
+    color: #333;
+}
